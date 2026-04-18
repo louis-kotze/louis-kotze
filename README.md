@@ -4,7 +4,7 @@ Senior full stack engineer based in South Africa. I build enterprise web applica
 
 #### Recent open source work
 
-- **[wireless-regdb](https://git.kernel.org/pub/scm/linux/kernel/git/wens/wireless-regdb.git/)** — Comprehensive audit and patches for WiFi 6E/7 regulatory data across multiple countries (HK, KR, RU, UA, ZA)
+- **[wireless-regdb patches](https://lore.kernel.org/wireless-regdb/?q=f:loukot@gmail.com)** — Comprehensive audit and patches for WiFi 6E/7 regulatory data across multiple countries (HK, KR, RU, UA, ZA)
 - **[rtw89 kernel driver](https://lore.kernel.org/linux-wireless/20260416045536.817930-1-loukot@gmail.com/)** — RF calibration timeout fix for RTL8922AU USB WiFi 7 adapters (accepted for merge)
 - **[morrownr/rtw89](https://github.com/morrownr/rtw89/pull/76)** — Same fix applied to the out-of-tree driver
 
