@@ -2,6 +2,8 @@
 
 Senior full stack engineer based in South Africa. I build enterprise web applications by day and occasionally dig into the Linux kernel when my own hardware misbehaves.
 
+**Personal site + writing:** [louiskotze.dev](https://louiskotze.dev)
+
 #### Recent open source work
 
 - **[wireless-regdb patches](https://lore.kernel.org/wireless-regdb/?q=f:loukot@gmail.com)** — Comprehensive audit and patches for WiFi 6E/7 regulatory data across multiple countries (HK, KR, RU, UA, ZA)
@@ -10,7 +12,9 @@ Senior full stack engineer based in South Africa. I build enterprise web applica
 
 #### Elsewhere
 
-I run [Prolific Studio](https://prolificstudio.co.za) — a small software consultancy focused on building reliable systems.
+- [louiskotze.dev](https://louiskotze.dev) — personal site, blog, and CV downloads
+- [Prolific Studio](https://prolificstudio.co.za) — small software consultancy I run
+- Kernel email: `loukot@gmail.com` — attribution for [my lore.kernel.org posts](https://lore.kernel.org/all/?q=f:loukot@gmail.com)
 
 ---
 
