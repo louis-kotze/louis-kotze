@@ -6,11 +6,13 @@ Senior full stack engineer based in South Africa. I build enterprise web applica
 
 #### Recent open source work
 
-- **[wireless-regdb patches](https://lore.kernel.org/wireless-regdb/?q=f:loukot@gmail.com)** — Five-country audit and patches for WiFi 6E/7 regulatory data. UA / HK / RU / ZA merged into `wens/wireless-regdb` in April 2026; KR in v3 review. Plus a Reviewed-by on a peer patch widening RU 6 GHz channel width.
+- **[NetworkManager MR !2405](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/merge_requests/2405)** — WiFi 7 MLO awareness for NetworkManager's background-scan logic: parses the AP-MLD address from the Multi-Link element so a single-AP MLO association keeps the relaxed scan cadence, eliminating scan-induced traffic stalls. Merged July 2026.
+- **[wireless-regdb patches](https://lore.kernel.org/wireless-regdb/?q=f:loukot@gmail.com)** — Five-country audit and patches for WiFi 6E/7 regulatory data. All five (UA / HK / RU / ZA / KR) merged into `wens/wireless-regdb` in April 2026. Plus a Reviewed-by on a peer patch widening RU 6 GHz channel width.
 - **[rtw89 RF-calibration fix](https://lore.kernel.org/linux-wireless/20260416045536.817930-1-loukot@gmail.com/)** — RTL8922AU USB WiFi 7 timeout fix; merged into Ping-Ke Shih's `rtw-next` tree in April 2026 with 5 independent `Tested-by` tags across USB chipsets.
 - **[cfg80211 MLO grammar fix](https://lore.kernel.org/linux-wireless/20260414122728.92234-1-loukot@gmail.com/)** — Error-message correction in `nl80211_validate_key_link_id`; Accepted by Johannes Berg.
 - **[morrownr/rtw89 PR #76](https://github.com/morrownr/rtw89/pull/76)** — Same RF-calibration fix backported to the out-of-tree DKMS driver (merged 2026-04-24).
 - **[Fedora bug 2458629](https://bugzilla.redhat.com/show_bug.cgi?id=2458629)** — Reproducer + root-cause analysis for a wpa_supplicant MLO reassociation race.
+- **In review:** [7 further patches](https://lore.kernel.org/all/?q=f:loukot@gmail.com) across `wpa_supplicant` (hostap) and linux-wireless — WiFi 7 MLO association fixes and EHT capability advertising.
 
 #### Elsewhere
 
