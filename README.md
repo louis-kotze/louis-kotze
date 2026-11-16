@@ -1,21 +1,18 @@
 ### Hi, I'm Louis 👋
 
-Senior full stack engineer based in South Africa. I build enterprise web applications by day and occasionally dig into the Linux kernel when my own hardware misbehaves.
+Senior full stack engineer based in South Africa. I build enterprise web applications by day and spend a fair bit of my spare time fixing the Linux Wi-Fi stack, which started when my own hardware misbehaved.
 
 **Personal site + writing:** [louiskotze.dev](https://louiskotze.dev)
 
-#### Recent open source work
+#### Open source work
 
-17 commits merged across five upstream projects, plus a `Reviewed-by` credit on another contributor's regulatory analysis.
+Mostly the Linux Wi-Fi stack: over 20 commits merged across five projects since April 2026.
 
-- **[wpa_supplicant / hostap — 7 commits](https://git.w1.fi/cgit/hostap/log/?qt=author&q=Kotze)** — WiFi 7 multi-link (MLO) association fixes merged July–August 2026: stale per-link BSS entries, ML-probe channel scanning, per-link key clearing, duplicated association-request IEs, and a PMKSA-caching deauthentication fallback, with two hwsim regression tests. Found and reproduced against real AP hardware; ships in the 2.13 release.
-- **[NetworkManager MR !2405](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/merge_requests/2405)** — WiFi 7 MLO awareness for NetworkManager's background-scan logic: parses the AP-MLD address from the Multi-Link element so a single-AP MLO association keeps the relaxed scan cadence, eliminating scan-induced traffic stalls. Merged July 2026.
-- **[wireless-regdb patches](https://lore.kernel.org/wireless-regdb/?q=f:loukot@gmail.com)** — Audit and patches for WiFi 6E/7 regulatory data: **7 commits merged** into `wens/wireless-regdb` across six jurisdictions (ZA ×2 / UA / HK / RU / KR / TG), each verified against the primary regulatory instrument. Plus a Reviewed-by on a peer patch widening RU 6 GHz channel width. Where a published instrument left a limit blank, I wrote to the national regulator (ARCEP Burkina Faso) and got a written ruling on the applicable 6 GHz limits before drafting the patch.
-- **[rtw89 RF-calibration fix](https://lore.kernel.org/linux-wireless/20260416045536.817930-1-loukot@gmail.com/)** — RTL8922AU USB WiFi 7 timeout fix; in mainline, with 5 independent `Tested-by` tags across USB chipsets.
-- **[cfg80211 MLO grammar fix](https://lore.kernel.org/linux-wireless/20260414122728.92234-1-loukot@gmail.com/)** — Error-message correction in `nl80211_validate_key_link_id`; in mainline.
-- **[morrownr/rtw89 PR #76](https://github.com/morrownr/rtw89/pull/76)** — Same RF-calibration fix backported to the out-of-tree DKMS driver (merged 2026-04-24).
-- **[Fedora bug 2458629](https://bugzilla.redhat.com/show_bug.cgi?id=2458629)** — Reproducer + root-cause analysis for a wpa_supplicant MLO reassociation race.
-- **In review:** [a cfg80211 patch](https://lore.kernel.org/all/?q=f:loukot@gmail.com) improving the diagnostics when an association BSS lookup fails.
+- **[wpa_supplicant / hostap](https://git.w1.fi/cgit/hostap/log/?qt=author&q=Kotze)**: fixed four bugs I reproduced on Wi-Fi 7 access points: stale per-link scan entries and per-link key clearing in multi-link (MLO) handling, duplicated elements in the Association Request, and falling back from PMKSA caching when the AP deauthenticates. Two came with new hwsim regression tests; all four shipped in wpa_supplicant 2.12. I later added a Multi-Link element fuzzer to the test suite. It found a one-byte over-read reachable before authentication from a crafted beacon (low severity), which I fixed in the same series (merged October 2026, after 2.12).
+- **[Linux kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Louis+Kotze)**: an rtw89 fix for RF-calibration timeouts on USB adapters (mainline since 7.2, tested on four Realtek USB chipsets), and cfg80211 error messages that say why the BSS lookup for an authentication or association failed, with KUnit tests (mainline since 7.3).
+- **[NetworkManager MR !2405](https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/merge_requests/2405)**, merged July 2026: NetworkManager reads the AP-MLD address from the Multi-Link element and, when every BSSID seen belongs to one Wi-Fi 7 access point, uses the long background-scan interval instead of the default five-minute one.
+- **[wireless-regdb](https://git.kernel.org/pub/scm/linux/kernel/git/wens/wireless-regdb.git/log/?qt=author&q=Kotze)**: updates for South Africa, Hong Kong, Russia, South Korea, Ukraine and Togo, each checked against the primary source: the national regulator's published rules, or for Ukraine's 60 GHz entry, ETSI EN 302 567. Also a `Reviewed-by` on another contributor's Russia 6 GHz patch.
+- **[morrownr/rtw89 PR #76](https://github.com/morrownr/rtw89/pull/76)**, merged April 2026: the RF-calibration fix backported to the out-of-tree DKMS driver.
 
 #### Elsewhere
 
